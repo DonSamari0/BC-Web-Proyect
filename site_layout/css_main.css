@@ -1,16 +1,51 @@
-body{
-	max-width: 100%;
-
+html body{
+	font-family: 'Oswald', sans-serif !important;
 }
+body{
+	background-color: #4A4A4A;
+	max-width: 100%;
+}
+
+/* Preloader */
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 250px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  /* centers the loading animation horizontally one the screen */
+  top: 50%;
+  /* centers the loading animation vertically one the screen */
+  background-image: url(../img/logo_barcelona_sm.png);
+  /* path to your loading animation */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: -100px 0 0 -100px;
+  /* is width and height divided by two */
+}
+
 .container-fluid{
 	background-color: rgb(255,255,255);
 }
 header{
 	width: 100%;
-	background-color: rgba(0,0,0,0.4);
+	/*background-color: rgba(0,0,0,0.4);*/
 	padding: 10px;
 	position: absolute;
-	z-index: 1;
+	z-index: 2;
 }
 header>ul{
 	list-style: none;
@@ -21,7 +56,8 @@ header>ul>li{
 	padding: 3px;
 }
 li>a{
-	color: rgb(240,240,240);
+	color: rgb(4,4,4);
+	font-weight: bolder;
 }
 li>a:hover{
 	text-decoration: none;
@@ -31,8 +67,16 @@ li>a:hover{
 	max-width: 100%;
 }
 #front-slide{
-	height: 730px;
 	padding: 0;
+}
+.img_bg{
+	object-fit: contain;
+	-moz-box-shadow: inset 0 0 10em #666;  
+ -webkit-box-shadow: inset 0 0 10em #666;   
+ box-shadow: inset 0 0 10em #666;
+}
+.img_sm{
+	display: none;
 }
 #fcarrousel{
 	max-width: 100%;
@@ -46,6 +90,14 @@ li>a:hover{
 	border-right:1px solid rgba(50,50,50,0.2);
 	background-repeat: no-repeat;
 	background-size: cover; 
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  transition: all 1s ease;
+}
+.fc_box:hover{
+	-moz-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  -webkit-filter: none; /* Safari 6.0 - 9.0 */
+    filter: none;
 }
 #fcarrousel .fc_box{
 	padding: 0;
@@ -55,40 +107,92 @@ li>a:hover{
 }
 .fc_box img{
 	/*height: 100%;*/
-	
 }
-
-
+.info_content{
+	padding: 15px;
+	font-style: italic;
+	font-weight: bold;
+	line-height: 50px;
+}
 /*FOOTER*/
 footer{
 	background-color: rgb(120,120,120);
 	color: rgb(255,255,255);
-	height: 400px;
+	/*height: 400px;*/
+	float: left;
+	width: 100%;
 }
-.f_camp{
-	height: 100px;
-	padding: 10px;
-	border-right: 1px solid rgba(85,148,203,0.1);
-	border-bottom: 1px solid rgba(85,148,203,0.1);
-	overflow: hidden;
+#container_foot{
+	background-color: #282828;
+	float: left;
+	width: 100%;
+	padding: 20px 80px;
 }
-.f_camp_r{
-	height: 300px;
-	padding: 10px;
-	border-bottom: 1px solid rgba(85,148,203,0.1);
-	overflow: hidden; 	
+#container_foot p span{
+	color: #737373;
 }
-.f_camp_b{
-	padding: 10px;
-	margin: 0 auto;
+#container_foot .foot{
+	padding: 0 40px;
 }
-form .col-xs-2{
-	margin-right: 5px;
+.foot img{
+	width: 50%;
+}
+.social_i{
+	float: left;
+	width: 32px;
+	height: 32px;
+	margin-right: 1px;
+}
+.foot_i{
+	width: 99px;
+	
 }
 
+
 @media only screen and (max-width: 768px){
+	
+}
+
+/* Extra small devices (phones, up to 480px) */
+@media screen and (max-width: 767px) {
 	#front-slide{
-	height: 350px;
-	padding: 0;
+	/*height: 480px;*/
 	}
+	.content-txt h1{
+	  font-size:24px;
+	}
+	.content-txt h2{
+	  font-size:14px;
+	}
+	.img_sm{
+		display: block;
+		object-fit: cover;
+	}	
+	.img_bg{
+		display: none;
+	}
+	#fcarrousel{
+	height: 100px;
+	}
+	#contaier_foot{
+		display: table;
+		vertical-align: middle;
+	}
+	.foot{
+		width: 100%;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.foot_i{
+		margin: 0 auto;
+	}
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+}
+/* tablets/desktops and up ----------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+/* large desktops and up ----------- */
+@media screen and (min-width: 1200px) {
 }
