@@ -70,7 +70,7 @@ img{
 .content-txt h1{
   font-family:'Oswald', sans-serif;
   font-size:30px;
-  color:#fff;
+  color:#C7C7C7;
   text-align:left;
   margin-left:30px;
   /*padding-bottom:20px;*/
@@ -236,3 +236,22 @@ img{
   100%{left:-420px;}
 }
 
+@media screen and (max-width: 767px){
+  .content-txt{
+    top: 75%;
+    padding: 10px 15px;
+
+  }
+  .content-txt h1{
+    font-size:20px;
+    margin-left:30px;
+    margin-bottom: 5px !important;
+    margin-top: 0 !important;
+  }
+  .content-txt h2{
+    font-size:10px;
+    margin-left:20px;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+}
