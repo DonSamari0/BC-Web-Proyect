@@ -42,7 +42,7 @@ body{
 }
 header{
 	width: 100%;
-	background-color: rgba(80,80,80,0.1);
+	/*background-color: rgba(80,80,80,0.1);*/
 	padding: 10px;
 	position: absolute;
 	z-index: 2;
@@ -73,6 +73,7 @@ li>a:hover{
 }
 #front-slide{
 	padding: 0;
+	height: 100vh;
 }
 /*#slider, .slider:after{
 	position: absolute;
@@ -86,7 +87,9 @@ li>a:hover{
 	background: url(../img/slider/pattern.png) top left; 
 }*/
 .img_bg{
-	/*object-fit: cover;*/
+	-webkit-filter: grayscale(10%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(10%);
+  object-fit: cover;
 }
 .img_sm{
 	display: none;
@@ -104,8 +107,8 @@ li>a:hover{
 	border-right:1px solid rgba(50,50,50,0.2);
 	background-repeat: no-repeat;
 	background-size: cover; 
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
+	-webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(80%);
   transition: all 1s ease;
 }
 .fc_box:hover{
@@ -195,25 +198,50 @@ li>a:hover{
 	border-right: 200px solid #F8F8F8;
 	float: right;
 }
+.modules{
+	height: 600px;
+}
 .wrapper .modules .content-mod{
-	width: 700px;
+	width: 600px;
 	margin: 0 auto;
-	background-color: rgba(200,200,200,0.4);
+	/*background-color: rgba(200,200,200,0.4);*/
 	text-align: center;
-	padding: 15px 10px;
+	padding: 15px 0px;
 	/*display: table-cell;*/
 	/*vertical-align: middle;*/
 }
 .wrapper .modules h2{
 	font-size: 60px;
-	color: #2E2E2E;
+	color: #C0C0C0;
 	margin-bottom: 10px;
-	text-align: center;
 }
-.wrapper .modules p{
+.content-mod p{
 	font-size: 20px;
-	color: #4F4F4F;
-	margin: 0;
+	margin-bottom: 15px;
+	color: #99855E;
+}
+.mod1, .mod3{
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100% auto;
+	background-attachment: fixed;
+  transition: all 1s ease;
+}
+.mod1{
+	background-image: url(../img/bar-img03.jpg); 
+}
+.mod3{
+	background-image: url(../img/bar-img04.jpg); 
+}
+#content-mod3{
+	text-align: right;
+	margin-right: 200px;
+}
+#content-mod3 h2{
+	color: #3B3B3B;
+}
+#content-mod3 p{
+	color: #EDEDED;
 }
 /*FOOTER*/
 footer{

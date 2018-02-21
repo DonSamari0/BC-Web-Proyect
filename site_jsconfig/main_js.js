@@ -7,7 +7,7 @@ $(window).on('load', function() { // makes sure the whole site is loaded
   
 
 
-  $("#front-slide").css("height",$(window).height()-200);
+  /*$("#front-slide").css("height",$(window).height()-200);
   $(".img_bg").css("height",$(window).height()-200);
-  $(".img_sm").css("width",$(window).width())-200;
+  $(".img_sm").css("width",$(window).width())-200;*/
 })
